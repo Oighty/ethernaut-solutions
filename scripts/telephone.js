@@ -1,4 +1,4 @@
-// exploit.js - Exploits the Telephone contract
+// telephone.js - Exploits the Telephone contract
 
 // Import statements
 require("dotenv").config();
