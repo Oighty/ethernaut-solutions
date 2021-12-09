@@ -242,6 +242,103 @@ const reentranceAbi = [
   }
 ];
 
+const elevatorAddress = '0x8C2600A6706c4100245324e533ef2C50e1160a83';
+const elevatorAbi = [
+  {
+    "inputs": [],
+    "name": "floor",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_floor",
+        "type": "uint256"
+      }
+    ],
+    "name": "goTo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "top",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+];
+
+const privacyAddress = '0xe6e31Bc44E247B7E60C65c814EE9225f84EC0317';
+const privacyAbi = [
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32[3]",
+        "name": "_data",
+        "type": "bytes32[3]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "ID",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "locked",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes16",
+        "name": "_key",
+        "type": "bytes16"
+      }
+    ],
+    "name": "unlock",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+];
+
 module.exports = {
     coinFlipAddress,
     coinFlipAbi,
@@ -255,4 +352,8 @@ module.exports = {
     kingAbi,
     reentranceAddress,
     reentranceAbi,
+    elevatorAddress,
+    elevatorAbi,
+    privacyAddress,
+    privacyAbi,
 };
