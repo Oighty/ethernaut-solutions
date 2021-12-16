@@ -24,6 +24,14 @@ module.exports = {
     tests: './test',
   },
   networks: {
+    hardhat: {
+      chainId: 1337,
+      forking: {
+        url: process.env.RINKEBY_URL,
+        blockNumber: 9826495,
+      },
+      accounts: [{privateKey: process.env.PRIVATE_KEY_1, balance: (100 * (10 ** 18)).toString()}],
+    },
     rinkeby: {
       chainId: 4,
       url: process.env.RINKEBY_URL,
